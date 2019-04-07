@@ -22,7 +22,9 @@
   },
   "homepage": "https://github.com/ircc-web-solutions/wet-boew-theme-core#readme",
   "dependencies": {
-    "bootstrap-sass": "^3.4.1"
+    "bootstrap-sass": "^3.4.1",
+    "wet-boew-theme-base": "github:ircc-web-solutions/wet-boew-theme-base#master",
+    "wet-boew-theme-default": "github:ircc-web-solutions/wet-boew-theme-default#master"
   },
   "devDependencies": {
     "grunt": "^1.0.4",

@@ -1,0 +1,24 @@
+{
+  "name": "wet-boew-theme-core",
+  "version": "1.0.0",
+  "description": "Web Experience Toolkit (WET): Theme Core (Generator of registered themes)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ircc-web-solutions/wet-boew-theme-core.git"
+  },
+  "keywords": [
+    "web",
+    "sass",
+    "wet-boew"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ircc-web-solutions/wet-boew-theme-core/issues"
+  },
+  "homepage": "https://github.com/ircc-web-solutions/wet-boew-theme-core#readme"
+}

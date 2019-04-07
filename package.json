@@ -24,7 +24,8 @@
   "dependencies": {
     "bootstrap-sass": "^3.4.1",
     "wet-boew-theme-base": "github:ircc-web-solutions/wet-boew-theme-base#master",
-    "wet-boew-theme-default": "github:ircc-web-solutions/wet-boew-theme-default#master"
+    "wet-boew-theme-default": "github:ircc-web-solutions/wet-boew-theme-default#master",
+    "wet-boew-theme-goc-intranet": "github:ircc-web-solutions/wet-boew-theme-goc-intranet#master"
   },
   "devDependencies": {
     "grunt": "^1.0.4",

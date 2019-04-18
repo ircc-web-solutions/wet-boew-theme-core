@@ -1,4 +1,7 @@
 # builder-theme
+[![dependency Status](https://david-dm.org/ircc-web-solutions/builder-theme/status.svg)](https://david-dm.org/ircc-web-solutions/builder-theme#info=dependencies)
+[![devDependency Status](https://david-dm.org/ircc-web-solutions/builder-theme/dev-status.svg)](https://david-dm.org/ircc-web-solutions/builder-theme#info=devDependencies)
+
 A builder for the themes compatible with the GoC WET-BOEW solution.
 
 ## Background

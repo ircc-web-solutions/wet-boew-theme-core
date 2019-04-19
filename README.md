@@ -27,7 +27,7 @@ sudo !!
 ```
 
 ### Install Node Version Manager
-Sometimes, Node can be a little special, and to step up and ease that issue is the Node Version Manager (NVM).  The instructions on the Creationix repository for [NVM](https://github.com/creationix/nvm) are fantastic, with the main command being:
+Sometimes, Node can be a little special, and to step up and ease that issue is the [Node Version Manager (NVM)](https://github.com/creationix/nvm).  The instructions in the repository are fantastic and the main installation command is:
 
 ```bash
 wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
@@ -36,14 +36,14 @@ wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | 
 Note: Restarting the terminal window may be required after this command.
 
 ### Install Node and Node Package Manager
-Once NVM is installed, use it to install Node (and Node Package Manager (NPM)).  Node is the JavaScript engine that runs the elements of the repository to perform the build steps while NPM is the utility required to download all the Node Modules used to support the source code.  Install it with the command:
+Once NVM is installed, use it to install [Node.js](https://nodejs.org/en) and [Node Package Manager (NPM)](https://www.npmjs.com).  Node is the JavaScript engine that runs the elements of the repository to perform the build steps while NPM is the utility required to download all the Node Modules used to support the source code.  Install both with the command:
 
 ```bash
 nvm install node
 ```
 
 ### Install Git
-Git commands are starting to become commonplace in many operating system distributions however, if it is not installed currently, execute the following command: 
+[Git](https://git-scm.com) provides the interactivity between the local repository and the remote repository (in this particular case, [GitHub](https://github.com) is hosting the main open repositories).  The Git commands are starting to become commonplace in many operating system distributions however, if it is not installed currently, execute the following command: 
 
 ```bash
 apt-get install git
@@ -66,7 +66,7 @@ npm install
 Note: If Node is unfamiliar territory, know that the `npm install` command is looking into the `package.json` file, which contains many of the configurations of the repository solution including a listing of the required node modules.  Also note that, once the command is run, it will create a folder called `node_modules` and place the files in that folder.
 
 ### Install the Grunt Command Line Interface (CLI)
-Grunt is a task runner that handles the execution of tasks within the solution, such as moving around files and issuing other commands, and is the backbone of the build operations.  Install it via the following command:
+[Grunt](https://gruntjs.com) is a task runner that handles the execution of tasks within the solution, such as moving around files and issuing other commands, and is the backbone of the build operations.  Install it via the following command:
 
 ```bash
 npm install -g grunt-cli
@@ -87,18 +87,33 @@ grunt build --theme=goc-intranet
 
 Note: The `grunt build` command builds the default WET-BOEW theme and is the functional equivalent of issuing the command as `grunt build --theme=default`
 
+| Theme Name | Command | Description |
+| --- | --- | --- |
+| Web Experience Toolkit Base | `wet-boew` or `default` | The base theme for the Web Experience Toolkit (WET-BOEW) |
+| Goverment of Canada Intranet | goc-intranet | The standard theme for usage within the Government of Canada (GoC) intranet-based sites |
+
+Unregistered themes can be build by identifying the GitHub repository directly as part of the theme parameter as follows:
+
+```bash
+grunt build --theme=repo-root/repo-name
+```
+
+When refering to a repository this way, assumptions are made on the location of files within the repository.  Therefore, to ensure that all files are pulled in correctly, please adhere to the following structure (all folders are optional, if not present, they won't be processed):
+
+```
+/assets/fonts/*
+/assets/images/*
+/assets/js/*
+/assets/javascripts/*
+/assets/css/*
+/assets/stylesheets/*
+```
+
+The difference between the `js` and `javascripts` folders are that the former is assumed to be precompiled, and will be copied as-is into the built theme folder, while the latter will be evaluated for linting and minification.
+
+In alignment, the difference between the `css` and `stylesheets` folders are that the former is assumed to be production CSS, and will be copied as-is into the built theme folder, while the latter is assumed to be SASS that will be processed, and evaluated for linting and minification.
+
 ## Now What?
 This is the point where you tap into your creativity and design your own theme!
 
 The WET-BOEW themes are a layering of various themes into a single CSS file.  Don't worry about creating the CSS file yourself, instead just create the SASS of your theme (in your own repository) and, when ready, contact us to include the reference into this repository so that anyone may build it.
-
-## What If It Isn't Ready to be Referenced?
-That is a good point and, honestly, at this point we haven't built that function into this solution (yet).  We will though, and we want it too, so if you wish to help us out with that then feel free to issue us a pull request to do so!
-
-Ideally we would like the command to work like this:
-
-```bash
-grunt build --repo=https://github.com/your_repo/theme-your_theme_name.git
-```
-
-Until that future exists, we will all have to wait patiently...  ;)

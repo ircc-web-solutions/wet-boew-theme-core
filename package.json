@@ -1,8 +1,8 @@
 {
-  "name": "wet-boew-theme-core",
+  "name": "builder-theme",
   "version": "1.0.0",
-  "description": "Web Experience Toolkit (WET): Theme Core (Generator of registered themes)",
-  "main": "index.js",
+  "description": "Web Experience Toolkit (WET): Theme Builder",
+  "main": "gruntfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -22,17 +22,13 @@
   },
   "homepage": "https://github.com/ircc-web-solutions/wet-boew-theme-core#readme",
   "dependencies": {
-    "bootstrap-sass": "^3.4.1",
-    "ircc-theme-base": "github:ircc-web-solutions/theme-base#master",
-    "ircc-theme-wet-boew": "github:ircc-web-solutions/theme-wet-boew#master",
-    "ircc-theme-goc-intranet": "github:ircc-web-solutions/theme-goc-intranet#master"
+    "bootstrap-sass": "^3.4.1"
   },
   "devDependencies": {
     "grunt": "^1.0.4",
     "grunt-contrib-clean": "^2.0.0",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-wget": "^0.1.3",
-    "grunt-zip": "^0.18.2",
-    "install-peers": "^1.0.3"
+    "grunt-zip": "^0.18.2"
   }
 }
